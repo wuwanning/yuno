@@ -13,5 +13,13 @@
         <module>yuno_base</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.22</version>
+        </dependency>
 
+
+    </dependencies>
 </project>

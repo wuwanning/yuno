@@ -11,5 +11,9 @@
 
     <artifactId>yuno_common</artifactId>
 
+    <dependencies>
+
+    </dependencies>
+
 
 </project>
