@@ -17,19 +17,46 @@
       <profile default="true" name="Default" enabled="true">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile default="false" name="Annotation profile for yuno_jpa" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="yuno_base" />
+      </profile>
+      <profile default="false" name="Annotation profile for yuno_common" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
         <module name="yuno_common" />
+      </profile>
+      <profile default="false" name="Annotation profile for yuno_base" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for yuno_test" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for yuno_gateway" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="yuno_gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="yuno" target="1.5" />
-      <module name="yuno_base" target="1.5" />
-      <module name="yuno_common" target="1.5" />
+      <module name="yuno" target="1.8" />
+      <module name="yuno_base" target="1.8" />
+      <module name="yuno_common" target="1.8" />
+      <module name="yuno_gateway" target="1.8" />
+      <module name="yuno_jpa" target="1.8" />
+      <module name="yuno_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

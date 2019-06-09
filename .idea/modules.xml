@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/yuno.iml" filepath="$PROJECT_DIR$/yuno.iml" />
-      <module fileurl="file://$PROJECT_DIR$/yuno_base/yuno_base.iml" filepath="$PROJECT_DIR$/yuno_base/yuno_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/yuno_common/yuno_common.iml" filepath="$PROJECT_DIR$/yuno_common/yuno_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuno_gateway/yuno_gateway.iml" filepath="$PROJECT_DIR$/yuno_gateway/yuno_gateway.iml" />
     </modules>
   </component>
 </project>
