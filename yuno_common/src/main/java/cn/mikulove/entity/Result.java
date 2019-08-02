@@ -16,19 +16,21 @@ public class Result {
 
     private Object data;
 
-    public Result() {
-    }
 
+    public Result() {
+
+    }
     public Result(boolean flag, Integer code, String messgage) {
         this.flag = flag;
         this.code = code;
         this.messgage = messgage;
     }
-
-    public Result(boolean flag, Integer code, String messgage, Object data) {
+    public Result(boolean flag, Integer code, String messgage,Object data) {
         this.flag = flag;
         this.code = code;
         this.messgage = messgage;
         this.data = data;
     }
+
+
 }

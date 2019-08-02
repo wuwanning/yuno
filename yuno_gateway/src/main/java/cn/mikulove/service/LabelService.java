@@ -4,6 +4,7 @@ import cn.mikulove.dao.LabelDao;
 import cn.mikulove.pojo.Label;
 import cn.mikulove.util.IdWorker;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -16,6 +17,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -40,7 +42,7 @@ public class LabelService {
         labelDao.save(label);
     }
 
-
+    @Cacheable(value = "label",key = "#id")
     public Label findById(String id) {
         return labelDao.findById(id).get();
     }
@@ -128,11 +130,11 @@ public class LabelService {
                     Predicate predicate = cb.like(root.get("labelname").as(String.class), "%" + label.getLabelname() + "%");
                     list.add(predicate);
                 }
-                if (label.getState() != null && !"".equals(label.getState())) {
-                    //等值查询标签的状态
-                    Predicate predicate = cb.equal(root.get("state").as(String.class), label.getState());
-                    list.add(predicate);
-                }
+//                if (label.getState() != null && !"".equals(label.getState())) {
+//                    //等值查询标签的状态
+//                    Predicate predicate = cb.equal(root.get("state").as(String.class), label.getState());
+//                    list.add(predicate);
+//                }
                 //创建一个数组, 作为最终的返回值的条件
                 Predicate[] parr = new Predicate[list.size()];
 
@@ -142,6 +144,11 @@ public class LabelService {
                 return cb.and(parr);
             }
         },pageAble);
+    }
+
+    public void testMap(){
+        HashMap<String,String> map = new HashMap<>();
+        map.put("k","v");
     }
 
 }
